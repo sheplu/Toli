@@ -10,9 +10,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/paul"
-        android:layout_above="@+id/miche"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="104dp" />
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/miche"
+        android:layout_alignStart="@+id/miche"
+        android:layout_marginTop="68dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,7 +22,26 @@
         android:text="Large Text"
         android:id="@+id/miche"
         android:layout_gravity="center_horizontal"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_above="@+id/miche"
+        android:layout_marginBottom="31dp"
+        android:layout_alignTop="@+id/paul" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_marginBottom="78dp"
+        android:layout_toEndOf="@+id/miche"
+        android:layout_alignLeft="@+id/miche"
+        android:layout_alignStart="@+id/miche" />
 
 </RelativeLayout>

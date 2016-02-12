@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +38,35 @@ public class MainActivity extends AppCompatActivity
         button = (Button) layout.findViewById(R.id.button);
         button.setOnClickListener(this);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        TextView test = null;
+        if(id == R.id.menu_refresh) {
+            test = (TextView) findViewById(R.id.count);
+            test.setText("refresh");
+            return true;
+        }
+        else if(id == R.id.menu_about){
+            test = (TextView) findViewById(R.id.count);
+            test.setText("about");
+            return true;
+        }
+        else if(id == R.id.menu_setting) {
+            test = (TextView) findViewById(R.id.count);
+            test.setText("setting");
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
