@@ -64,6 +64,11 @@ public class MainActivity extends AppCompatActivity
     public void changeActivity(View v) {
         Intent intent = new Intent(MainActivity.this,
                 StatsActivity.class);
+
+        TextView count = (TextView) findViewById(R.id.count);
+
+        intent.putExtra("note_paul", count.getText().toString());
+        intent.putExtra("note_miche", 19);
         startActivity(intent);
     }
 }
